@@ -9,13 +9,26 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationSplitView {
+            List {
+                NavigationLink("Async/Await", destination: AsyncView())
+                NavigationLink("Handler", destination: HandlerView())
+                NavigationLink("Combine", destination: CombineView())
+            }
+            .navigationTitle("Demo")
+            .toolbar {
+                Button {
+
+                } label: {
+                    Image(systemName: "questionmark.circle")
+                }
+            }
+        } detail: {
+            ContentUnavailableView(
+                "Select an element from the sidebar",
+                systemImage: "doc.text.image.fill"
+            )
         }
-        .padding()
     }
 }
 
