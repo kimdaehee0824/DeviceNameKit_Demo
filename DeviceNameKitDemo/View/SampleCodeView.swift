@@ -22,7 +22,7 @@ struct SampleCodeView: View {
     init(model: SampleCodeModel) {
         self.code = model.code
         self.title = model.title
-        self.description = model.decription
+        self.description = model.description
     }
 
     var body: some View {
@@ -54,7 +54,7 @@ struct SampleCodeView: View {
                 \.codeEditorTheme,
                  colorScheme == .dark ? Theme.defaultDark : Theme.defaultLight
             )
-            .frame(height: 160)
+            .frame(height: 180)
             .clipShape(.rect(cornerRadius: 5))
         }
         .padding()

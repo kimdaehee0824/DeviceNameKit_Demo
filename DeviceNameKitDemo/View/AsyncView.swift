@@ -44,6 +44,8 @@ struct AsyncView: View {
                     .task {
                         modelName = await fetcher.getDeviceNameOrDefault()
                     }
+
+                Spacer()
             }
         }
     }
