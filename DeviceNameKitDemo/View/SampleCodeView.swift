@@ -36,29 +36,31 @@ struct SampleCodeView: View {
 
             Text(description)
                 .frame(maxWidth: .infinity, alignment: .leading)
+
+            Spacer()
+                .frame(height: 24)
+
+            CodeEditor(
+                text: $code,
+                position: $position,
+                messages: $messages,
+                language: .swift()
+            )
+            .environment(
+                \.codeEditorLayoutConfiguration,
+                 CodeEditor.LayoutConfiguration(showMinimap: false, wrapText: true)
+            )
+            .environment(
+                \.codeEditorTheme,
+                 colorScheme == .dark ? Theme.defaultDark : Theme.defaultLight
+            )
+            .frame(height: 160)
+            .clipShape(.rect(cornerRadius: 5))
         }
-        .padding()
-
-        CodeEditor(
-            text: $code,
-            position: $position,
-            messages: $messages,
-            language: .swift()
-        )
-        .environment(
-            \.codeEditorLayoutConfiguration,
-             CodeEditor.LayoutConfiguration(showMinimap: false, wrapText: true)
-        )
-        .environment(
-            \.codeEditorTheme,
-             colorScheme == .dark ? Theme.defaultDark : Theme.defaultLight
-        )
-        .clipShape(.rect(cornerRadius: 5))
-
         .padding()
     }
 }
 
 #Preview {
-    SampleCodeView(model: SampleCodeType.combine.model())
+    SampleCodeView(model: SampleCodeType.async.model())
 }

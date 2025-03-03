@@ -1,5 +1,5 @@
 {
-  "originHash" : "b1513307c5774352101ffba01c819fd79f7eb9f2cc3c806660835cfc7a7dfa73",
+  "originHash" : "858f835ae1bfde1de417439c6edde17e6fc329a76773e9ef68c47af25c9a81bb",
   "pins" : [
     {
       "identity" : "codeeditorview",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "2b532411ae79520b973f1647e7ed51a6678d1188",
         "version" : "0.15.3"
+      }
+    },
+    {
+      "identity" : "devicenamekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kimdaehee0824/DeviceNameKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "5827663f1724c70b4ecfd4a33b3bcdfd391c234d"
       }
     },
     {

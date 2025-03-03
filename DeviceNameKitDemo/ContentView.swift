@@ -18,7 +18,7 @@ struct ContentView: View {
             .navigationTitle("Demo")
             .toolbar {
                 Button {
-
+                    UIApplication.shared.open(URL(string: "https://github.com/kimdaehee0824/DeviceNameKit")!)
                 } label: {
                     Image(systemName: "questionmark.circle")
                 }
